@@ -19,7 +19,7 @@ def sendsms():
     
     number=x.get()
     client = Client('SSID','Token')
-    client.messages.create(from_='+12513151771',to=number, body="Your OTP is " + otp)
+    client.messages.create(from_='your number from twilio website account',to=number, body="Your OTP is " + otp)
     
     messagebox.showinfo("showinfo","OTP Sent...")
     root.destroy()
