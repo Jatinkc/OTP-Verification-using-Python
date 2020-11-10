@@ -6,7 +6,7 @@ import random
 otp=random.randint(100,10000)
 otp=str(otp)
 
-def check():
+def verify():
     userentry=y.get()
     if otp==userentry:
          messagebox.showinfo("showinfo","Success...")
@@ -15,7 +15,7 @@ def check():
         
 
 
-def sendsms():
+def send():
     
     number=x.get()
     client = Client('SSID','Token')
@@ -32,7 +32,7 @@ def sendsms():
     l1.place(x=10,y=5)
     e1=tk.Entry(win,textvariable=y)
     e1.place(x=10,y=30,height=30,width=250)
-    b1=tk.Button(win,text="Verify",fg="white",bg="#202020",command=check)
+    b1=tk.Button(win,text="Verify",fg="white",bg="#fbc531",command=verify)
     b1.place(x=10,y=70)
 
 
@@ -44,7 +44,7 @@ l=tk.Label(root,text="Enter you mobile no.: ")
 l.place(x=10,y=5)
 e=tk.Entry(root,textvariable=x)
 e.place(x=10,y=30,height=30,width=250)
-b=tk.Button(root,text="Send OTP",fg="white",bg="#202020",command=sendsms)
+b=tk.Button(root,text="Send OTP",fg="white",bg="##fbc531",command=send)
 b.place(x=10,y=70)
 
 
